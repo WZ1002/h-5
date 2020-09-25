@@ -1,0 +1,44 @@
+// 中间内容样式
+main {
+    width: 100%;
+    background: #f5f5f5;
+    h2 {
+        width: $w1;
+        height: 58px;
+        margin: $m;
+        color: $color;
+        font-size: 22px;
+    }
+    .row {
+        width: $w1;
+        height: 340px;
+        background: sandybrown;
+        margin: $m;
+        margin-bottom: 14px;
+    }
+    .banner-main {
+        width: $w1;
+        height: 120px;
+        margin: $m;
+        img {
+            width: $w1;
+            height: 120px;
+        }
+    }
+    ul {
+        width: $w1;
+        margin: $m;
+        overflow: hidden;
+        li {
+            width: 296px;
+            height: 285px;
+            float: left;
+            background: lightcoral;
+            margin-bottom: 26px;
+            margin-right: 14px;
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+    }
+}

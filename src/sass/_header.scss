@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// 头部内容样式
+header {
+    width: $w;
+    // display: $d;
+    .bannerAD {
+        width: $w;
+        height: 120px;
+        background: darkcyan;
+        img {
+            width: $w;
+            height: 100%;
+        }
+    }
+    .nav {
+        width: $w;
+        height: 40px;
+        background: $color;
+        color: #b0b0b0;
+        .nav-main {
+            width: $w1;
+            margin: $m;
+            font-size: 12px;
+            a {
+                line-height: 40px;
+                text-align: center;
+                color: #b0b0b0;
+            }
+            span {
+                margin: 0 .3em;
+                color: #424242;
+            }
+            a:hover {
+                color: #fff;
+            }
+        }
+        .car {
+            width: 120px;
+            line-height: 40px;
+            text-align: center;
+            background: #424242;
+            float: right;
+            margin-left: 15px;
+            span {
+                color: #b0b0b0;
+            }
+        }
+        .user {
+            width: 142.47px;
+            line-height: 40px;
+            text-align: center;
+            float: right;
+        }
+    }
+    .container {
+        width: $w1;
+        height: 100px;
+        margin: $m;
+        overflow: hidden;
+        .biao {
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 22px 0px;
+        }
+        .list-nav {
+            float: left;
+            margin-top: 12px;
+            margin-left: 180px;
+            a {
+                display: block;
+                // height: 44px;
+                line-height: 40px;
+                text-align: center;
+                padding: 22px 5px;
+                font-size: 16px;
+                color: #333333;
+            }
+        }
+        .seek {
+            margin-top: 30px;
+            float: right;
+        }
+        .txt {
+            display: block;
+            width: 245px;
+            height: 40px;
+            float: left;
+        }
+        .tex-tow {
+            width: 40px;
+            height: 40px;
+            float: left;
+        }
+    }
+    .slideshow {
+        width: $w1;
+        height: 460px;
+        margin: $m;
+        background: url(../img/1.jpg)no-repeat;
+        background-size: 100% 100%;
+    }
+    .nav-tow {
+        width: 234px;
+        height: 440px;
+        padding-top: 20px;
+        @include opacityvalue(0.6);
+        background: rgb(105, 101, 101, );
+        li {
+            width: 244px;
+            height: 42px;
+            padding-left: 20px;
+            .title {
+                color: #fff;
+            }
+        }
+    }
+    .bottom {
+        width: $w1;
+        height: 170px;
+        margin-top: 14px;
+        margin-bottom: 26px;
+        margin: $m;
+        background: aqua;
+        overflow: hidden;
+    }
+}

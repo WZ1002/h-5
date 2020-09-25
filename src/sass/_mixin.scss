@@ -1,0 +1,19 @@
+$w:100%;
+$w1:1226px;
+$m: 0 auto;
+$d:flex;
+$color: #333333;
+@mixin borderstyle($style:solid, $size:1px, $color:#ccc) {
+    border: $size $style $color;
+}
+
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+}
+
+@mixin opacityvalue($opacity:0.5) {
+    opacity: $opacity;
+    filter: alpha(opacity=$opacity*100);
+}
