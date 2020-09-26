@@ -17,3 +17,12 @@ $color: #333333;
     opacity: $opacity;
     filter: alpha(opacity=$opacity*100);
 }
+
+@mixin boxsize($w2, $h) {
+    width: $w2;
+    height: $h;
+    line-height: $h;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

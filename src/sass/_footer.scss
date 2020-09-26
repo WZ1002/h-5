@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    height: 500px;
+    // height: 500px;
     .serve {
         width: $w;
         .serve-top {
@@ -71,20 +71,63 @@ footer {
                 display: block;
                 @include borderstyle(1px, solid, #ff6700);
                 color: #ff6700;
+                text-align: center;
+                line-height: 30px;
+                margin-left: 64px;
+            }
+            a:hover {
+                color: #fff;
+                background: #ff6700;
+            }
+            div {
+                margin-top: 10px;
             }
         }
     }
     .copyright {
         width: $w;
-        height: 400px;
+        // height: 400px;
         background: #f5f5f5;
         padding: 30px 0px;
         .copyright-main {
             width: $w1;
             margin: 0 auto;
         }
-        p {
+        .equity {
+            float: left;
+            margin-right: 10px;
+        }
+        .equity-nav {
+            font-size: 12px;
+            a {
+                color: #757575;
+            }
+            span {
+                margin: 0 .3em;
+                color: #b0b0b0;
+            }
+        }
+        .equity-state {
+            font-size: 12px;
+            color: #757575;
+            a {
+                color: #757575;
+            }
+        }
+        .links {
+            width: 1096px;
+            height: 28px;
             margin: 0 auto;
+            // margin-left: 67;
+            margin-top: 4px;
+        }
+        .links-noe {
+            width: 83.02px;
+            height: 28px;
+        }
+        .links-last {
+            width: 105.6px;
+            height: 40px;
         }
     }
 }

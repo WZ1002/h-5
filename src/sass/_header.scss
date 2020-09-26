@@ -16,6 +16,7 @@ a {
 header {
     width: $w;
     // display: $d;
+    overflow: hidden;
     .bannerAD {
         width: $w;
         height: 120px;
@@ -112,6 +113,7 @@ header {
         margin: $m;
         background: url(../img/1.jpg)no-repeat;
         background-size: 100% 100%;
+        margin-bottom: 14px;
     }
     .nav-tow {
         width: 234px;
@@ -131,10 +133,52 @@ header {
     .bottom {
         width: $w1;
         height: 170px;
-        margin-top: 14px;
-        margin-bottom: 26px;
         margin: $m;
-        background: aqua;
-        overflow: hidden;
+        .fast {
+            width: 228px;
+            height: 158px;
+            background: #333333;
+            padding: 3px;
+            float: left;
+            margin-bottom: 26px;
+            li {
+                width: 73px;
+                height: 80px;
+                border-right: 1px solid;
+            }
+            li:nth-child(3) {
+                border-right: none;
+            }
+            li:last-child {
+                border-right: none;
+            }
+            li:nth-child(-n+3) {
+                border-bottom: 1px solid;
+            }
+            a {
+                display: block;
+                // width: 46px;
+                padding: 0 3px;
+                font-size: 12px;
+                text-align: center;
+                color: #fff;
+                padding-top: 18px;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .span1 {
+            width: 315px;
+            height: 164px;
+            margin-left: 15px;
+            float: left;
+            // margin-bottom: 20px;
+            img {
+                width: $w;
+                height: $w;
+            }
+        }
     }
 }

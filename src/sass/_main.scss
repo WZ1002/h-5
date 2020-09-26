@@ -1,44 +1,163 @@
-// 中间内容样式
-main {
-    width: 100%;
-    background: #f5f5f5;
-    h2 {
-        width: $w1;
-        height: 58px;
-        margin: $m;
-        color: $color;
-        font-size: 22px;
-    }
-    .row {
-        width: $w1;
-        height: 340px;
-        background: sandybrown;
-        margin: $m;
-        margin-bottom: 14px;
-    }
-    .banner-main {
-        width: $w1;
-        height: 120px;
-        margin: $m;
-        img {
+    // 中间内容样式
+    main {
+        width: 100%;
+        background: #f5f5f5;
+        position: relative;
+        li:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+            transform: translate3d(0, -2px, 0);
+        }
+        h2 {
+            width: $w1;
+            height: 58px;
+            margin: $m;
+            color: $color;
+            font-size: 22px;
+            line-height: 58px;
+        }
+        .row {
+            width: $w1;
+            // height: 340px;
+            margin: $m;
+            margin-bottom: 26px;
+            display: flex;
+            li {
+                width: 234px;
+                margin-right: 14px;
+                text-align: center;
+                background: #fff;
+                font-size: 14px;
+            }
+            .count-down {
+                width: 234px;
+                height: 339px;
+                border-top: 1px solid #e53935;
+                margin-right: 14px;
+                background: #fff;
+            }
+            .slideshow-small {
+                li {
+                    height: 339px;
+                }
+                li:nth-child(1) {
+                    border-top: 1px solid #ab32ab;
+                }
+                li:nth-child(2) {
+                    border-top: 1px solid #1c40b8;
+                }
+                li:nth-child(3) {
+                    border-top: 1px solid #32ab9b;
+                }
+                li:last-child {
+                    margin-right: 0px;
+                    border-top: 1px solid #c9dd17;
+                }
+                div {
+                    margin-top: 30px;
+                }
+            }
+            .phone-span {
+                width: 234px;
+                height: 614px;
+                margin-right: 14px;
+            }
+            .phone-kind {
+                li {
+                    height: 300px;
+                }
+                li:nth-child(4) {
+                    margin-right: 0px;
+                }
+                li:last-child {
+                    margin-right: 0px;
+                }
+                li:nth-child(-n+4) {
+                    margin-bottom: 14px;
+                }
+            }
+            .home-appliances {
+                li {
+                    height: 300px;
+                }
+                li:nth-child(5) {
+                    margin-right: 0px;
+                }
+                li:last-child {
+                    margin-right: 0px;
+                    display: flex;
+                    flex-direction: column;
+                    background: none;
+                }
+                li:nth-child(-n+5) {
+                    margin-bottom: 14px;
+                }
+            }
+            #brick-item {
+                width: $w;
+                height: 143px;
+                margin-bottom: 14px;
+                background: #fff;
+                display: flex;
+                .tcl {
+                    width: 97px;
+                    height: $w;
+                    text-align: center;
+                    // line-height: 143px;
+                    font-size: 12px;
+                    padding-top: 48px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .skip {
+                    width: 97px;
+                    height: $w;
+                    padding-top: 20px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    // img {
+                    //     width: $w;
+                    //     height: $w;
+                    // }
+                }
+            }
+            #brick-items {
+                width: $w;
+                height: 143px;
+                background: skyblue;
+            }
+        }
+        .banner-main {
             width: $w1;
             height: 120px;
+            margin: $m;
+            img {
+                width: $w1;
+                height: 120px;
+            }
+        }
+        ol {
+            width: $w1;
+            margin: $m;
+            overflow: hidden;
+            li {
+                width: 296px;
+                height: 285px;
+                float: left;
+                margin-bottom: 26px;
+                margin-right: 14px;
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+        .swiper {
+            width: 70px;
+            height: 25px;
+            position: absolute;
+            @include borderstyle(1px, solid, #ccc);
+            top: 20px;
+            right: 338px;
+            text-align: center;
+            font-size: 20px;
         }
     }
-    ul {
-        width: $w1;
-        margin: $m;
-        overflow: hidden;
-        li {
-            width: 296px;
-            height: 285px;
-            float: left;
-            background: lightcoral;
-            margin-bottom: 26px;
-            margin-right: 14px;
-        }
-        li:last-child {
-            margin-right: 0;
-        }
-    }
-}
