@@ -1,6 +1,7 @@
     // 中间内容样式
     main {
         width: 100%;
+        height: 100%;
         background: #f5f5f5;
         position: relative;
         li:hover {
@@ -14,10 +15,61 @@
             color: $color;
             font-size: 22px;
             line-height: 58px;
+            position: relative;
+            .swiper {
+                width: 70px;
+                height: 25px;
+                position: absolute;
+                @include borderstyle(1px, solid, #ccc);
+                top: 16px;
+                right: 0px;
+                text-align: center;
+                line-height: 25px;
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                >span {
+                    width: 35px;
+                    text-align: center;
+                    color: gray;
+                }
+                span:last-child {
+                    border-left: 1px solid gray;
+                }
+                span:hover {
+                    color: #e53935;
+                }
+            }
+            .swiper-phone {
+                width: 92px;
+                height: 58px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: flex;
+                justify-content: center;
+                >span {
+                    // width: 46px;
+                    font-size: 16px;
+                }
+                span:last-child {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: gray;
+                }
+            }
+            .swiper-home {
+                // width: ;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: flex;
+                justify-content: center;
+            }
         }
         .row {
             width: $w1;
-            // height: 340px;
             margin: $m;
             margin-bottom: 26px;
             display: flex;
@@ -34,6 +86,13 @@
                 border-top: 1px solid #e53935;
                 margin-right: 14px;
                 background: #fff;
+            }
+            p {
+                @include boxsize;
+                color: #333333;
+            }
+            p:last-child {
+                color: #e53935;
             }
             .slideshow-small {
                 li {
@@ -60,6 +119,10 @@
                 width: 234px;
                 height: 614px;
                 margin-right: 14px;
+                img {
+                    width: 234px;
+                    height: $w;
+                }
             }
             .phone-kind {
                 li {
@@ -75,11 +138,39 @@
                     margin-bottom: 14px;
                 }
             }
-            .home-appliances {
-                li {
+            .tupian {
+                width: 234px;
+                height: 204px;
+                >img {
+                    width: $w;
+                    height: $w;
+                }
+            }
+            .home-span {
+                width: 234px;
+                height: 614px;
+                margin-right: 14px;
+                display: flex;
+                flex-direction: column;
+                float: left;
+                div {
+                    width: 234px;
                     height: 300px;
                 }
-                li:nth-child(5) {
+                div:first-child {
+                    margin-bottom: 14px;
+                    background: sandybrown;
+                }
+            }
+            .home-appliances {
+                float: left;
+                display: none;
+                li {
+                    width: 234px;
+                    height: 300px;
+                    margin-right: 14px;
+                }
+                li:nth-child(4) {
                     margin-right: 0px;
                 }
                 li:last-child {
@@ -88,7 +179,7 @@
                     flex-direction: column;
                     background: none;
                 }
-                li:nth-child(-n+5) {
+                li:nth-child(-n+4) {
                     margin-bottom: 14px;
                 }
             }
@@ -102,7 +193,6 @@
                     width: 97px;
                     height: $w;
                     text-align: center;
-                    // line-height: 143px;
                     font-size: 12px;
                     padding-top: 48px;
                     padding-left: 10px;
@@ -114,10 +204,6 @@
                     padding-top: 20px;
                     padding-left: 10px;
                     padding-right: 10px;
-                    // img {
-                    //     width: $w;
-                    //     height: $w;
-                    // }
                 }
             }
             #brick-items {
@@ -150,14 +236,8 @@
                 margin-right: 0;
             }
         }
-        .swiper {
-            width: 70px;
-            height: 25px;
-            position: absolute;
-            @include borderstyle(1px, solid, #ccc);
-            top: 20px;
-            right: 338px;
-            text-align: center;
-            font-size: 20px;
+        .home-appliances:nth-of-type(1) {
+            display: block!important;
+            font-size: 45px;
         }
     }

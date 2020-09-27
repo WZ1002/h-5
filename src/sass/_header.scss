@@ -15,8 +15,8 @@ a {
 // 头部内容样式
 header {
     width: $w;
-    // display: $d;
     overflow: hidden;
+    // 头部广告
     .bannerAD {
         width: $w;
         height: 120px;
@@ -26,6 +26,7 @@ header {
             height: 100%;
         }
     }
+    // 顶部导航
     .nav {
         width: $w;
         height: 40px;
@@ -66,6 +67,7 @@ header {
             float: right;
         }
     }
+    // 顶部下面的导航
     .container {
         width: $w1;
         height: 100px;
@@ -83,7 +85,6 @@ header {
             margin-left: 180px;
             a {
                 display: block;
-                // height: 44px;
                 line-height: 40px;
                 text-align: center;
                 padding: 22px 5px;
@@ -105,8 +106,13 @@ header {
             width: 40px;
             height: 40px;
             float: left;
+            border-left: none;
+        }
+        input {
+            @include borderstyle(1px, solid, gray)
         }
     }
+    // 轮播图
     .slideshow {
         width: $w1;
         height: 460px;
@@ -114,6 +120,21 @@ header {
         background: url(../img/1.jpg)no-repeat;
         background-size: 100% 100%;
         margin-bottom: 14px;
+        .nav-menu {
+            width: 500px;
+            height: $w;
+            background: #fff;
+            float: left;
+            display: none;
+            // position: relative;
+        }
+        // .nav-menus {
+        //     width: 500px;
+        //     height: $w;
+        //     // position: absolute;
+        //     // top: 0px;
+        //     // left: 0px;
+        // }
     }
     .nav-tow {
         width: 234px;
@@ -121,15 +142,29 @@ header {
         padding-top: 20px;
         @include opacityvalue(0.6);
         background: rgb(105, 101, 101, );
+        float: left;
+        a {
+            display: block;
+            height: 42px;
+        }
         li {
-            width: 244px;
+            width: 214px;
             height: 42px;
             padding-left: 20px;
-            .title {
-                color: #fff;
-            }
+            font-size: 14px;
+            line-height: 42px;
+            position: relative;
+            color: #fff;
+        }
+        span {
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            font-size: 18px;
+            color: #e0e0e0;
         }
     }
+    // 头部最后的内容
     .bottom {
         width: $w1;
         height: 170px;
@@ -157,7 +192,6 @@ header {
             }
             a {
                 display: block;
-                // width: 46px;
                 padding: 0 3px;
                 font-size: 12px;
                 text-align: center;
@@ -174,7 +208,6 @@ header {
             height: 164px;
             margin-left: 15px;
             float: left;
-            // margin-bottom: 20px;
             img {
                 width: $w;
                 height: $w;

@@ -121,6 +121,11 @@ header .container .tex-tow {
   width: 40px;
   height: 40px;
   float: left;
+  border-left: none;
+}
+
+header .container input {
+  border: solid 1px gray;
 }
 
 header .slideshow {
@@ -132,6 +137,14 @@ header .slideshow {
   margin-bottom: 14px;
 }
 
+header .slideshow .nav-menu {
+  width: 500px;
+  height: 100%;
+  background: #fff;
+  float: left;
+  display: none;
+}
+
 header .nav-tow {
   width: 234px;
   height: 440px;
@@ -139,16 +152,30 @@ header .nav-tow {
   opacity: 0.6;
   filter: alpha(opacity=60);
   background: #696565;
+  float: left;
+}
+
+header .nav-tow a {
+  display: block;
+  height: 42px;
 }
 
 header .nav-tow li {
-  width: 244px;
+  width: 214px;
   height: 42px;
   padding-left: 20px;
+  font-size: 14px;
+  line-height: 42px;
+  position: relative;
+  color: #fff;
 }
 
-header .nav-tow li .title {
-  color: #fff;
+header .nav-tow span {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 18px;
+  color: #e0e0e0;
 }
 
 header .bottom {
@@ -212,6 +239,7 @@ header .bottom .span1 img {
 
 main {
   width: 100%;
+  height: 100%;
   background: #f5f5f5;
   position: relative;
 }
@@ -230,6 +258,76 @@ main h2 {
   color: #333333;
   font-size: 22px;
   line-height: 58px;
+  position: relative;
+}
+
+main h2 .swiper {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  border: solid 1px #ccc;
+  top: 16px;
+  right: 0px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main h2 .swiper > span {
+  width: 35px;
+  text-align: center;
+  color: gray;
+}
+
+main h2 .swiper span:last-child {
+  border-left: 1px solid gray;
+}
+
+main h2 .swiper span:hover {
+  color: #e53935;
+}
+
+main h2 .swiper-phone {
+  width: 92px;
+  height: 58px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main h2 .swiper-phone > span {
+  font-size: 16px;
+}
+
+main h2 .swiper-phone span:last-child {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: gray;
+}
+
+main h2 .swiper-home {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .row {
@@ -255,6 +353,21 @@ main .row .count-down {
   border-top: 1px solid #e53935;
   margin-right: 14px;
   background: #fff;
+}
+
+main .row p {
+  width: 234;
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  color: #333333;
+}
+
+main .row p:last-child {
+  color: #e53935;
 }
 
 main .row .slideshow-small li {
@@ -288,6 +401,11 @@ main .row .phone-span {
   margin-right: 14px;
 }
 
+main .row .phone-span img {
+  width: 234px;
+  height: 100%;
+}
+
 main .row .phone-kind li {
   height: 300px;
 }
@@ -304,11 +422,52 @@ main .row .phone-kind li:nth-child(-n+4) {
   margin-bottom: 14px;
 }
 
-main .row .home-appliances li {
+main .row .tupian {
+  width: 234px;
+  height: 204px;
+}
+
+main .row .tupian > img {
+  width: 100%;
+  height: 100%;
+}
+
+main .row .home-span {
+  width: 234px;
+  height: 614px;
+  margin-right: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: left;
+}
+
+main .row .home-span div {
+  width: 234px;
   height: 300px;
 }
 
-main .row .home-appliances li:nth-child(5) {
+main .row .home-span div:first-child {
+  margin-bottom: 14px;
+  background: sandybrown;
+}
+
+main .row .home-appliances {
+  float: left;
+  display: none;
+}
+
+main .row .home-appliances li {
+  width: 234px;
+  height: 300px;
+  margin-right: 14px;
+}
+
+main .row .home-appliances li:nth-child(4) {
   margin-right: 0px;
 }
 
@@ -324,7 +483,7 @@ main .row .home-appliances li:last-child {
   background: none;
 }
 
-main .row .home-appliances li:nth-child(-n+5) {
+main .row .home-appliances li:nth-child(-n+4) {
   margin-bottom: 14px;
 }
 
@@ -391,15 +550,9 @@ main ol li:last-child {
   margin-right: 0;
 }
 
-main .swiper {
-  width: 70px;
-  height: 25px;
-  position: absolute;
-  border: solid 1px #ccc;
-  top: 20px;
-  right: 338px;
-  text-align: center;
-  font-size: 20px;
+main .home-appliances:nth-of-type(1) {
+  display: block !important;
+  font-size: 45px;
 }
 
 footer {
@@ -451,11 +604,11 @@ footer .serve .guide li {
   border: none;
 }
 
-footer .serve .guide li p {
+footer .serve .guide p {
   margin-top: 10px;
 }
 
-footer .serve .guide li p a {
+footer .serve .guide p a {
   color: #757575;
   font-size: 12px;
 }
