@@ -10,6 +10,7 @@ li {
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 // 头部内容样式
@@ -117,24 +118,65 @@ header {
         width: $w1;
         height: 460px;
         margin: $m;
-        background: url(../img/1.jpg)no-repeat;
-        background-size: 100% 100%;
         margin-bottom: 14px;
+        position: relative;
         .nav-menu {
             width: 500px;
             height: $w;
             background: #fff;
-            float: left;
             display: none;
-            // position: relative;
+            position: absolute;
+            top: 0;
+            left: 234px;
+            z-index: 1;
         }
-        // .nav-menus {
-        //     width: 500px;
-        //     height: $w;
-        //     // position: absolute;
-        //     // top: 0px;
-        //     // left: 0px;
-        // }
+    }
+    ol {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        li {
+            width: 10px;
+            height: 10px;
+            float: left;
+            @include borderstyle(1px, solid, #757575);
+            border-radius: 50%;
+            background: #757575;
+            margin: 0 2px;
+        }
+    }
+    .click-left,
+    .click-right {
+        width: 41px;
+        height: 69px;
+        text-align: center;
+        line-height: 69px;
+        font-size: 60px;
+        position: absolute;
+        top: 192px;
+        cursor: pointer;
+        user-select: none;
+        color: rgba(0, 0, 0, .2);
+        background-color: transparent;
+    }
+    .click-left {
+        left: 234px;
+    }
+    .click-right {
+        right: 0px;
+    }
+    .banner {
+        width: $w;
+        height: $w;
+        img {
+            width: $w;
+            height: $w;
+        }
+        li {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
     }
     .nav-tow {
         width: 234px;
@@ -142,7 +184,8 @@ header {
         padding-top: 20px;
         @include opacityvalue(0.6);
         background: rgb(105, 101, 101, );
-        float: left;
+        position: absolute;
+        top: 0;
         a {
             display: block;
             height: 42px;

@@ -18,7 +18,7 @@ $color: #333333;
     filter: alpha(opacity=$opacity*100);
 }
 
-@mixin boxsize($w2:234, $h:22px) {
+@mixin boxsize($w2:234px, $h:22px) {
     width: $w2;
     height: $h;
     line-height: $h;

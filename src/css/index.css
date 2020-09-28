@@ -10,6 +10,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 header {
@@ -132,17 +133,77 @@ header .slideshow {
   width: 1226px;
   height: 460px;
   margin: 0 auto;
-  background: url(../img/1.jpg) no-repeat;
-  background-size: 100% 100%;
   margin-bottom: 14px;
+  position: relative;
 }
 
 header .slideshow .nav-menu {
   width: 500px;
   height: 100%;
   background: #fff;
-  float: left;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 234px;
+  z-index: 1;
+}
+
+header ol {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+header ol li {
+  width: 10px;
+  height: 10px;
+  float: left;
+  border: solid 1px #757575;
+  border-radius: 50%;
+  background: #757575;
+  margin: 0 2px;
+}
+
+header .click-left,
+header .click-right {
+  width: 41px;
+  height: 69px;
+  text-align: center;
+  line-height: 69px;
+  font-size: 60px;
+  position: absolute;
+  top: 192px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+header .click-left {
+  left: 234px;
+}
+
+header .click-right {
+  right: 0px;
+}
+
+header .banner {
+  width: 100%;
+  height: 100%;
+}
+
+header .banner img {
+  width: 100%;
+  height: 100%;
+}
+
+header .banner li {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 header .nav-tow {
@@ -152,7 +213,8 @@ header .nav-tow {
   opacity: 0.6;
   filter: alpha(opacity=60);
   background: #696565;
-  float: left;
+  position: absolute;
+  top: 0;
 }
 
 header .nav-tow a {
@@ -244,13 +306,6 @@ main {
   position: relative;
 }
 
-main li:hover {
-  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translate3d(0, -2px, 0);
-          transform: translate3d(0, -2px, 0);
-}
-
 main h2 {
   width: 1226px;
   height: 58px;
@@ -339,6 +394,13 @@ main .row {
   display: flex;
 }
 
+main .row li:hover {
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate3d(0, -2px, 0);
+          transform: translate3d(0, -2px, 0);
+}
+
 main .row li {
   width: 234px;
   margin-right: 14px;
@@ -356,7 +418,7 @@ main .row .count-down {
 }
 
 main .row p {
-  width: 234;
+  width: 234px;
   height: 22px;
   line-height: 22px;
   overflow: hidden;
@@ -456,22 +518,23 @@ main .row .home-span div:first-child {
   background: sandybrown;
 }
 
-main .row .home-appliances {
+main .row .homeappliances {
   float: left;
   display: none;
 }
 
-main .row .home-appliances li {
+main .row .homeappliances li {
   width: 234px;
   height: 300px;
   margin-right: 14px;
+  margin-bottom: 14px;
 }
 
-main .row .home-appliances li:nth-child(4) {
+main .row .homeappliances li:nth-child(4) {
   margin-right: 0px;
 }
 
-main .row .home-appliances li:last-child {
+main .row .homeappliances li:last-child {
   margin-right: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -483,8 +546,8 @@ main .row .home-appliances li:last-child {
   background: none;
 }
 
-main .row .home-appliances li:nth-child(-n+4) {
-  margin-bottom: 14px;
+main .row .homeappliances li:nth-child(n+4) {
+  margin-bottom: 0px;
 }
 
 main .row #brick-item {
@@ -550,9 +613,72 @@ main ol li:last-child {
   margin-right: 0;
 }
 
-main .home-appliances:nth-of-type(1) {
+main .homeappliances:nth-of-type(1) {
   display: block !important;
-  font-size: 45px;
+}
+
+.nav-right {
+  position: fixed;
+  top: 360px;
+  right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav-right li {
+  width: 84px;
+  height: 92px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  text-align: center;
+}
+
+.nav-right .border-last {
+  border: none;
+}
+
+.nav-right .lump-last {
+  margin-top: 14px;
+  display: none;
+}
+
+.nav-right div {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.nav-right img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-right .hide {
+  z-index: -1;
+}
+
+.nav-right span {
+  font-size: 14px;
+  color: #757575;
+}
+
+.nav-right li:hover .hide {
+  z-index: 1;
+}
+
+.nav-right li:hover span {
+  color: #e53935;
 }
 
 footer {
