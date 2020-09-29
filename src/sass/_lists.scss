@@ -17,18 +17,13 @@ a {
 //     width: $w;
 //     height: 14px;
 // }
-p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
 // 第一块
-div {
+.header {
     width: $w1;
     margin: $m;
+    h2 {
+        margin-bottom: 14px;
+    }
 }
 
 .list {
@@ -37,6 +32,13 @@ div {
     margin: $m;
     display: flex;
     margin-bottom: 14px;
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
 }
 
 li {
@@ -51,6 +53,11 @@ li {
         width: $w;
         height: $w;
     }
+}
+
+.list:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    transform: translate3d(0, -2px, 0);
 }
 
 .right {
@@ -81,67 +88,148 @@ li {
 }
 
 // 第二块
-// .xuanyan {
-//     width: 1240px;
-//     
-// }
 .lists {
     width: 1240px;
-    height: 482px;
     margin: $m;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 14px;
-    li:last-child {
-        margin-left: 14px;
+    .mains:nth-child(odd) {
+        margin-right: 14px;
+    }
+    li:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+        transform: translate3d(0, -2px, 0);
     }
 }
 
 .mains {
     width: 606px;
-    height: 434px;
+    height: 482px;
     margin-bottom: 14px;
-}
-
-.main-top {
-    width: 606px;
-    height: 358px;
-    background: #f5f5f5;
-    img {
-        width: $w;
-        height: $w;
+    .main-top {
+        width: 606px;
+        height: 358px;
+        background: #f5f5f5;
+        img {
+            width: $w;
+            height: $w;
+        }
+    }
+    .main-bottom {
+        width: 606px;
+        height: 124px;
+        background: #fff;
+        overflow: hidden;
+        position: relative;
+    }
+    .titles {
+        margin-top: 38px;
+        margin-left: 48px;
+        font-size: 24px;
+        color: rgba(51, 51, 51, .9);
+        @include boxsize;
+    }
+    .main-tow {
+        margin-top: 4px;
+        margin-left: 48px;
+        font-size: 14px;
+        color: rgba(51, 51, 51, .7);
+        @include boxsize;
+    }
+    .bottoms {
+        position: absolute;
+        top: 40px;
+        right: 70px;
+        margin-top: 17px;
+        color: #ff6700;
+        strong {
+            font-size: 30px;
+        }
     }
 }
 
-.main-bottom {
-    width: 606px;
-    height: 124px;
-    background: #fff;
-    overflow: hidden;
-    position: relative;
-}
-
-.titles {
-    margin-top: 38px;
-    margin-left: 48px;
-    font-size: 24px;
-    color: rgba(51, 51, 51, .9);
-}
-
-.main-tow {
-    margin-top: 4px;
-    margin-left: 48px;
-    font-size: 14px;
-    color: rgba(51, 51, 51, .7);
-}
-
-.bottoms {
-    position: absolute;
-    top: 40px;
-    right: 70px;
-    margin-top: 17px;
-    color: #ff6700;
-    strong {
-        font-size: 30px;
+// 分页
+.pagelist {
+    clear: both;
+    // width: 1170px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 20px;
+    .m-style {
+        float: right;
+        text-align: center;
+        span {
+            float: left;
+            margin: 0 5px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            color: #bdbdbd;
+            font-size: 14px;
+        }
+        .active {
+            float: left;
+            margin: 0 5px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            background: #e91e63;
+            color: #fff;
+            font-size: 14px;
+            border: 1px solid #e91e63;
+        }
+        a {
+            float: left;
+            margin: 0 5px;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            background: #fff;
+            border: 1px solid #ebebeb;
+            color: #bdbdbd;
+            font-size: 14px;
+        }
+        a:hover {
+            color: #fff;
+            background: #e91e63;
+        }
+        .m-style>.next,
+        .m-style>.prev {
+            font-family: "Simsun";
+            font-size: 16px;
+            font-weight: bold;
+            width: 80px;
+        }
+    }
+    .m-style:before,
+    .m-style:after {
+        content: "";
+        display: table;
+    }
+    .m-style:after {
+        clear: both;
+        overflow: hidden;
+    }
+    .now,
+    .count {
+        padding: 0 5px;
+        color: #f00;
+    }
+    .eg img {
+        max-width: 800px;
+        min-height: 500px;
+    }
+    input {
+        float: left;
+        margin: 0 5px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #ebebeb;
+        outline: none;
+        color: #bdbdbd;
+        font-size: 14px;
     }
 }

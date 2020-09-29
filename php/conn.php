@@ -8,7 +8,7 @@ define('USERNAME','root');
 
 define('PASSWORD','root');
 
-define('DBNAME','h5-2007');
+define('DBNAME','xiaomi');
 
 $conn = @new mysqli(HOST,USERNAME,PASSWORD,DBNAME);
 

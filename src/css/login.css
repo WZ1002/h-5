@@ -9,3 +9,9 @@ main {
   height: 588px;
   background: salmon;
 }
+
+.username {
+  width: 410px;
+  height: 525px;
+  background: darkcyan;
+}
