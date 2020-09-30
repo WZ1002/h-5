@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#cart_header {
+    width: $w;
+    height: 102px;
+    border-bottom: 2px solid #ff6700;
+}
+
+#header_nav {
+    width: $w1;
+    height: 74px;
+    margin: $m;
+    background: salmon;
+}

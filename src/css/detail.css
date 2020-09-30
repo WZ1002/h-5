@@ -119,7 +119,7 @@ a {
 }
 
 #n_product .mn_product > .mn_left li:hover a {
-  color: #e67000;
+  color: #ff6700;
 }
 
 #n_product .mn_product > .mn_left > li {
@@ -139,7 +139,7 @@ a {
 }
 
 #n_product .mn_product > .mn_right li:hover a {
-  color: #e67000;
+  color: #ff6700;
 }
 
 #n_product .mn_product > .mn_right > li {
@@ -170,27 +170,37 @@ a {
   width: 560px;
   height: 566px;
   position: relative;
-  background: sandybrown;
 }
 
-#xiangqing .xiangqing_box .xiangqing_pic img {
-  width: 100%;
-  height: 100%;
-}
-
-#xiangqing .xiangqing_box .xiangqing_pic .cut {
-  width: 100%;
-  height: 20px;
+#xiangqing .xiangqing_box .xiangqing_pic .smallpic_box {
+  width: 560px;
+  height: 546px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
+}
+
+#xiangqing .xiangqing_box .xiangqing_pic .lunbo_pic {
+  width: 560px;
+  height: 566px;
+  position: absolute;
+}
+
+#xiangqing .xiangqing_box .xiangqing_pic .lunbo_pic > .smallpic {
+  width: 560px;
+  height: 566px;
+}
+
+#xiangqing .xiangqing_box .xiangqing_pic .cut {
+  width: 430px;
+  height: 20px;
+  padding-left: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   bottom: 0px;
-  background: saddlebrown;
 }
 
 #xiangqing .xiangqing_box .xiangqing_pic .index {
@@ -198,6 +208,29 @@ a {
   height: 3px;
   margin: 0px 4px;
   background: #ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+#xiangqing .xiangqing_box .xiangqing_pic .jiantou {
+  position: absolute;
+  top: 40%;
+  width: 41px;
+  height: 69px;
+  font-size: 46px;
+  text-align: center;
+  line-height: 69px;
+  color: silver;
+}
+
+#xiangqing .xiangqing_box .xiangqing_pic .mi_left {
+  left: 0px;
+}
+
+#xiangqing .xiangqing_box .xiangqing_pic .mi_right {
+  right: 0px;
 }
 
 #xiangqing .xiangqing_text {
@@ -215,6 +248,13 @@ a {
 #xiangqing .xiangqing_text h2 {
   margin-bottom: 8px;
   font-size: 24px;
+  width: 234px;
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 #xiangqing .xiangqing_text .explain {
@@ -225,13 +265,13 @@ a {
 
 #xiangqing .xiangqing_text .mi {
   font-size: 14px;
-  color: #e67000;
+  color: #ff6700;
   margin-bottom: 12px;
 }
 
 #xiangqing .xiangqing_text .price {
   font-size: 18px;
-  color: #e67000;
+  color: #ff6700;
   margin-bottom: 14px;
 }
 
@@ -310,7 +350,7 @@ a {
 #xiangqing .xiangqing_text .cart .add {
   width: 294px;
   height: 54px;
-  background: #e67000;
+  background: #ff6700;
   color: #fff;
   text-align: center;
   line-height: 54px;

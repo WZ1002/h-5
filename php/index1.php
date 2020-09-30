@@ -1,5 +1,8 @@
 <?php
+
 header('content-type:text/html;charset=utf-8');
+header('Access-Control-Allow-Origin:*');
+header('Access-Control-Allow-Method:POST,GET');
 define('HOST','localhost');
 define('USERNAME','root');
 define('PASSWORD','root');

@@ -23,7 +23,7 @@
             margin-left: 5px;
             margin-top: 21px;
             li:hover a {
-                color: #e67000;
+                color: #ff6700;
             }
             >li {
                 float: right;
@@ -39,7 +39,7 @@
             margin-top: 21px;
             float: right;
             li:hover a {
-                color: #e67000;
+                color: #ff6700;
             }
             >li {
                 float: right;
@@ -66,25 +66,53 @@
             width: 560px;
             height: 566px;
             position: relative;
-            background: sandybrown;
-            img {
-                width: $w;
-                height: $w;
+            .smallpic_box {
+                width: 560px;
+                height: 546px;
+                display: flex;
+                position: relative;
+            }
+            .lunbo_pic {
+                width: 560px;
+                height: 566px;
+                position: absolute;
+                >.smallpic {
+                    width: 560px;
+                    height: 566px;
+                }
             }
             .cut {
-                width: $w;
+                width: 430px;
                 height: 20px;
+                padding-left: 130px;
                 display: flex;
-                flex-direction: column;
                 position: absolute;
                 bottom: 0px;
-                background: saddlebrown;
             }
             .index {
                 width: 50px;
                 height: 3px;
                 margin: 0px 4px;
                 background: #ccc;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .jiantou {
+                position: absolute;
+                top: 40%;
+                width: 41px;
+                height: 69px;
+                font-size: 46px;
+                text-align: center;
+                line-height: 69px;
+                color: silver;
+            }
+            .mi_left {
+                left: 0px;
+            }
+            .mi_right {
+                right: 0px;
             }
         }
     }
@@ -96,6 +124,7 @@
         h2 {
             margin-bottom: 8px;
             font-size: 24px;
+            @include boxsize;
         }
         .explain {
             margin-bottom: 14px;
@@ -104,12 +133,12 @@
         }
         .mi {
             font-size: 14px;
-            color: #e67000;
+            color: #ff6700;
             margin-bottom: 12px;
         }
         .price {
             font-size: 18px;
-            color: #e67000;
+            color: #ff6700;
             margin-bottom: 14px;
         }
         hr {
@@ -167,7 +196,7 @@
             .add {
                 width: 294px;
                 height: 54px;
-                background: #e67000;
+                background: #ff6700;
                 color: #fff;
                 text-align: center;
                 line-height: 54px;

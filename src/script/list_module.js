@@ -17,26 +17,28 @@ define(['pagination', 'jlazyload'], function() {
                 let $str1 = '';
                 $.each(data, function(index, value) {
                     $str = `
+                    
                     <li class="left">
-                    <a href="">
+                    <a  href="detail.html?sid=${value.sid}" target="_blank">
                     <img class="lazy" data-original="${value.url}" width="200" height="200"/>
                     </a>
                 </li>
         
-        
                 <li class="right">
-                    <a href="">
+                <a href="detail.html?sid=${value.sid}" target="_blank">
                         <p class="title">${value.title}</p>
                         <p class="main">120Hz弹窗全面屏，天玑1000+旗舰处理器，索尼6400万四摄</p>
                         <p class="bottom"><strong>${value.price}</strong>元起</p>
-                    </a>
+                        </a>
                 </li>
+           
                     `;
                 });
                 $.each(data, function(index, value) {
                     $str1 += `
+                   
                     <li class="mains">
-                    <a href="" class="include">
+                    <a  class="include" href="detail.html?sid=${value.sid}" target="_blank">
                         <div class="main-top">
                         <img class="lazy" data-original="${value.url}" width="200" height="200"/>
                         </div>

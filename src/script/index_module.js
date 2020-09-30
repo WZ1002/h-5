@@ -225,7 +225,7 @@ define(['jquery'], function() {
                     }, 5000)
                 })
                 timer = setInterval(() => {
-                    $clickRight.trigger('click')
+                    $clickLeft.trigger('click')
                 }, 5000)
             })();
         }
