@@ -1,17 +1,193 @@
-.logo {
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+#wrap {
+  line-height: 100%;
+  color: #757575;
+}
+
+#wrap > #top {
   width: 1130px;
   height: 98px;
   margin: 0 auto;
 }
 
-main {
-  width: 100%;
-  height: 588px;
-  background: salmon;
+#wrap > #top > .title {
+  width: 200px;
+  height: 100%;
 }
 
-.username {
+#wrap > #top > .title > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#wrap > #banner {
+  width: 100%;
+  height: 588px;
+  position: relative;
+}
+
+#wrap > #banner > .login {
   width: 410px;
-  height: 525px;
-  background: darkcyan;
+  height: 555px;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 6px 15px 3px rgba(138, 153, 150, 0.4);
+          box-shadow: 0 6px 15px 3px rgba(138, 153, 150, 0.4);
+  padding: 0 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#wrap > #banner > .login > .mi_login {
+  width: 410px;
+  height: 37px;
+  padding-top: 37px;
+  padding-bottom: 24px;
+}
+
+#wrap > #banner > .login > .mi_login > a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #666;
+}
+
+#wrap > #banner > .login > .mi_login > a:hover {
+  color: orange;
+}
+
+#wrap > #banner > .login > .mi_login > a:first-of-type {
+  margin-left: 60px;
+}
+
+#wrap > #banner > .login > .mi_login > span {
+  font-size: 24px;
+  margin: 0 20px;
+}
+
+#wrap > #banner > .login > #loginForm {
+  overflow: hidden;
+  position: relative;
+}
+
+#wrap > #banner > .login > #loginForm > input {
+  width: 220px;
+  margin-top: 20px;
+  height: 50px;
+}
+
+#wrap > #banner > .login > #loginForm > span {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+#wrap > #banner > .login > #loginForm > button {
+  width: 120px;
+  margin-top: 30px;
+  height: 50px;
+}
+
+#wrap > #banner > .login > p {
+  text-align: center;
+}
+
+#wrap > #banner > .login > p:first-of-type {
+  color: orange;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#wrap > #banner > .login > p:last-of-type span {
+  margin: 0 6px;
+}
+
+#wrap > #banner > .login > p:last-of-type a {
+  color: gray;
+  text-decoration: none;
+}
+
+#wrap > #banner > .login > p:last-of-type a:hover {
+  color: orange;
+}
+
+#wrap > #banner > .login > fieldset {
+  border: 1px solid #e0e0e0;
+  margin-top: 100px;
+  height: 8px;
+}
+
+#wrap > #banner > .login > fieldset > legend {
+  width: 25%;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+  color: #666;
+}
+
+#wrap > #banner > .login > .fontIcon {
+  margin-top: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+#wrap > #banner > .login > .fontIcon .icon {
+  font-size: 35px;
+  color: white;
+  margin-right: 30px;
+}
+
+#wrap > #banner > .login > .fontIcon .icon:last-of-type {
+  margin-right: 0;
+}
+
+#wrap > #footer {
+  height: 140px;
+  padding-top: 100px;
+}
+
+#wrap > #footer > nav {
+  list-style: none;
+  text-align: center;
+}
+
+#wrap > #footer > nav > li {
+  display: inline-block;
+}
+
+#wrap > #footer > nav > li > a {
+  color: #333;
+  text-decoration: none;
+  padding: 0 10px;
+  border-right: 1px solid black;
+}
+
+#wrap > #footer > nav > li:last-of-type > a {
+  border-right: none;
+}
+
+#wrap > #footer > p {
+  height: 60px;
+  text-align: center;
+  margin: 10px;
+  color: #9d9d9d;
 }

@@ -54,7 +54,7 @@
                         width: 20px;
                         height: 20px;
                         border-radius: 50%;
-                        background: gray;
+                        // background: gray;
                     }
                 }
                 .swiper-home {
@@ -88,6 +88,19 @@
                     border-top: 1px solid #e53935;
                     margin-right: 14px;
                     background: #fff;
+                    text-align: center;
+                    p:nth-child(1) {
+                        margin-top: 20px;
+                    }
+                    p:nth-child(2) {
+                        margin-left: 98px;
+                        width: 34px;
+                        height: 53px;
+                    }
+                    p>img {
+                        width: 34px;
+                        height: 53px;
+                    }
                 }
                 p {
                     @include boxsize;

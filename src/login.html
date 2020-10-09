@@ -9,22 +9,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>小米帐号 - 登录</title>
     <link rel="stylesheet" href="./css/login.css">
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="login_module"></script>
+
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="./img/loginTitle.png" alt="">
+    <div id="wrap">
+        <div id="top">
+            <div class="title">
+                <a href="../html/index.html"></a>
+            </div>
         </div>
-    </header>
-    <main>
-        <div class="username">
-            <input type="text"><br>
-            <input type="password">
+        <div id="banner">
+            <div class="login">
+                <div class="mi_login">
+                    <a href="#">账号登录</a>
+                    <span>|</span>
+                    <a href="#">扫码登录</a>
+                </div>
+                <div id="loginForm" action="" method="" name="">
+                    <input type="text" class="form-control" placeholder="账号" id="username" name="username">
+                    <span class="username"></span><br>
+                    <input type="password" class="form-control" placeholder="密码" id="password" name="password"><br>
+                    <button id="btn" type="submit" class="btn btn-warning btn-block">登录</button>
+                </div>
+                <p>手机短信登录/注册</p>
+                <p><a href="./registry.html">立即注册</a><span>|</span><a href="#">忘记密码？</a></p>
+                <fieldset>
+                    <legend>其他方式登陆</legend>
+                </fieldset>
+                <!-- <div class="fontIcon">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-QQ"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo1"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-zhifubao"></use>
+                    </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-3-copy"></use>
+                    </svg>
+                </div> -->
 
+            </div>
         </div>
-    </main>
-    <footer>底部</footer>
+
+        <div id="footer">
+            <nav>
+                <li><a href="#">简体</a></li>
+                <li><a href="#">繁体</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">隐私政策</a></li>
+            </nav>
+            <p>小米公司版权所有-京ICP备10046444-<span><img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png" alt=""></span>京公网安备11010802020134号-京ICP证110507号</p>
+        </div>
+    </div>
 </body>
 
 </html>

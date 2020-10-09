@@ -370,7 +370,6 @@ main h2 .swiper-phone span:last-child {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: gray;
 }
 
 main h2 .swiper-home {
@@ -415,6 +414,22 @@ main .row .count-down {
   border-top: 1px solid #e53935;
   margin-right: 14px;
   background: #fff;
+  text-align: center;
+}
+
+main .row .count-down p:nth-child(1) {
+  margin-top: 20px;
+}
+
+main .row .count-down p:nth-child(2) {
+  margin-left: 98px;
+  width: 34px;
+  height: 53px;
+}
+
+main .row .count-down p > img {
+  width: 34px;
+  height: 53px;
 }
 
 main .row p {

@@ -81,7 +81,7 @@ define(['pagination', 'jlazyload'], function() {
                 callback: function(api) {
                     console.log(api.getCurrent());
                     $.ajax({
-                        url: 'http://192.168.13.50/xiaomi/php/listdata.php',
+                        url: 'http://192.168.13.11/xiaomi/php/listdata.php',
                         data: {
                             page: api.getCurrent()
                         },

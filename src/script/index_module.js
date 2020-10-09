@@ -1,4 +1,4 @@
-define(['jquery'], function() {
+define(['jquery', 'jlazyload'], function() {
     return {
         init: function() {
             //数据渲染
@@ -8,7 +8,7 @@ define(['jquery'], function() {
                 const $phone = $('.phone-span img');
                 const $oUl = $('.qie-tow');
                 $.ajax({
-                        url: 'http://192.168.13.50/xiaomi/php/index1.php',
+                        url: 'http://192.168.13.11/xiaomi/php/index1.php',
                         dataType: 'json'
                     })
                     .done(function(data) {
@@ -18,7 +18,9 @@ define(['jquery'], function() {
                                 $str += `
                                 <li>
                                 <a href="">
-                                    <div class="tupian"><img src="${value.url}" alt=""></div>
+                                    <div class="tupian">
+                                    <img class="lazy" data-original="${value.url}"width="200" height="200">
+                                    </div>
                                     <p>${value.title}</p>
                                     <p>双模5G，骁龙865，弹出全面屏</p>
                                     <p>${value.price}元</p>
@@ -31,6 +33,9 @@ define(['jquery'], function() {
                             }
                         });
                         $div.html($str)
+                        $(function() {
+                            $("img.lazy").lazyload({ effect: "fadeIn" });
+                        });
                     })
                     .done(function(data) {
                         let $str1 = '';
@@ -40,7 +45,9 @@ define(['jquery'], function() {
                                 $str1 += `
                                 <li>
                                 <a href="">
-                                    <div class="tupian"><img src="${value.url}" alt=""></div>
+                                    <div class="tupian">
+                                    <img class="lazy" data-original="${value.url}"width="200" height="200">
+                                    </div>
                                     <p>${value.title}</p>
                                     <p>大屏更享受</p>
                                     <p>${value.price}元</p>
@@ -50,7 +57,9 @@ define(['jquery'], function() {
                             }
                         });
                         $ul.html($str1)
-
+                        $(function() {
+                            $("img.lazy").lazyload({ effect: "fadeIn" });
+                        });
                     })
                     .done(function(data) {
                         let $str2 = '';
@@ -60,7 +69,9 @@ define(['jquery'], function() {
                                 $str2 += `
                                 <li>
                                 <a href="">
-                                    <div class="tupian"><img src="${value.url}" alt=""></div>
+                                    <div class="tupian">
+                                    <img class="lazy" data-original="${value.url}"width="200" height="200">
+                                    </div>
                                     <p>${value.title}</p>
                                     <p>大屏更享受</p>
                                     <p>${value.price}元</p>
@@ -70,6 +81,9 @@ define(['jquery'], function() {
                             }
                         });
                         $oUl.html($str2)
+                        $(function() {
+                            $("img.lazy").lazyload({ effect: "fadeIn" });
+                        });
                     });
             })();
             // 二级菜单
@@ -228,6 +242,27 @@ define(['jquery'], function() {
                     $clickLeft.trigger('click')
                 }, 5000)
             })();
+
+
+            //倒计时
+            function djs() {
+                let futuretime = new Date('2020-10-10 14:00:00'); //未来时间
+                let currenttime = new Date(); //当前时间。
+                let time = parseInt((futuretime - currenttime) / 1000); //秒
+
+                // console.log(time);//3459705
+                let days = parseInt(time / 86400); //天
+                let hours = parseInt(time % 86400 / 3600); //小时
+                let mins = parseInt(time % 3600 / 60); //分
+                let secs = time % 60;
+                return '' + '' + hours + ':' + mins + ':' + secs;
+            }
+
+            $('.jishiqi').html(djs());
+            //2020-10-1 12:23:45
+            setInterval(function() {
+                $('.jishiqi').html(djs());
+            }, 1000);
         }
     };
 });
